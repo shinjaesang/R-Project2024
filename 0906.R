@@ -24,7 +24,7 @@ arr[,1]
 arr[3,1]
 
 #===================
-#행열(martix)
+#행렬(martix)
 #행의 개수만 설정하면 열의 개수는 자동으로 저장할 데이터 만큼 설정된다.
 x = 1:12
 mtx = matrix(x, nrow = 3)
@@ -36,5 +36,17 @@ mtx
 #행과 열의 이름 지정 데이터가 저장되는 순서를 행 우선으로 설정하는 방법
 x = 1:6
 names = list(c("김판석", "이영호"), c("수학", "영어", "국어"))
-mtx = matrix(x, nrow = 2, dimnames = names)
+mtx = matrix(x, nrow = 2, dimnames = names, byrow = TRUE)
+mtx
+
+#기존의 행렬(matrix)에 행을 추가하는 방법
+y=c(7,8,9)
+mtx=rbind(mtx, y)
+rownames(mtx)[3]="박나래"
+mtx
+
+#기존의 행렬에 열 추가하는 방법
+y=c(10, 11, 12)
+mtx=cbind(mtx, y)
+colnames(mtx)[4]="과학"
 mtx
