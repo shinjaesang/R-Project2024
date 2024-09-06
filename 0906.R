@@ -50,3 +50,7 @@ y=c(10, 11, 12)
 mtx=cbind(mtx, y)
 colnames(mtx)[4]="과학"
 mtx
+
+#list
+lst = list(성명="장발장", 나이=40, 성적=c(70, 80))
+lst
